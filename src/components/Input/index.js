@@ -9,7 +9,6 @@ const input = (props) => {
         type = {props.type}
         placeholder = {props.placeholder}
         onChange = {props.handleChange}
-        value = {props.value}
       />
     </Form.Group>
   )
