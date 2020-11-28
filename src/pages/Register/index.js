@@ -6,6 +6,8 @@ import Input from '../../components/Input'
 import Message from '../../components/Modal'
 import Model from '../../models/model.js'
 
+import './register.scss'
+
 
 const register = () => {
 
@@ -46,23 +48,30 @@ const handleClose = () => {
 
   return (
     <>
+      <h2>Welcome to register address.</h2>
+      <span className='see-itens'>
+        <A href = {'/address'}>
+          See yours address
+        </A>
+      </span>
+
       <Form onSubmit = {handleRegister}>
         <Input 
-          label = 'name'    
+          label = 'Name'    
           placeholder = 'type your name' 
           type = 'text' 
           value = {name}
           handleChange = {handleName}/>
         
         <Input 
-          label = 'adress'  
+          label = 'Adress'  
           placeholder = 'type your address' 
           type = 'text'
           value = {address} 
           handleChange = {handleAdress}/>
         
         <Input 
-          label = 'zipCode' 
+          label = 'ZipCode' 
           placeholder = 'type your zipCode' 
           type = 'text' 
           handleChange = {handleZipCode}
@@ -70,9 +79,9 @@ const handleClose = () => {
 
         <Form.Group>
           <Button 
-            variant = 'success'
+            variant = 'primary'
             type = 'submit'>
-            Register
+            <strong>Register address</strong>
           </Button>
         </Form.Group>
       </Form>

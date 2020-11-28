@@ -12,7 +12,6 @@ function App(props){
     <div className='container content'>
       <div className='row'>
         <div className='col-sm-12'>
-          <h2>Welcome</h2>
           <Routes />
         </div>
       </div>

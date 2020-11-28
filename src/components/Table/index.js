@@ -6,9 +6,9 @@ const address = (props) => {
     <Table stripped = 'true' bordered hover responsive>
       <thead>
         <tr>
-          <th>name</th>
-          <th>address</th>
-          <th>zipCode</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>ZipCode</th>
         </tr>
       </thead>
       <tbody>

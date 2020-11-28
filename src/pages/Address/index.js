@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { Button } from 'react-bootstrap'
+import { navigate } from 'hookrouter'
 
 import Table from '../../components/Table'
 import List  from '../../components/ItensAddress'
+
+import './address.scss'
 
 const address = () => {
 
@@ -25,10 +29,25 @@ const address = () => {
 
   },[loadAddress])
 
+  const handleNewRegister = (event) => {
+    event.preventDefault()
+    navigate('/')
+  }
+
   return (
-    <Table>
-      <List list = {address}/>
-    </Table>
+    <>
+      <h2>Welcome to area of your address. You can remove or edit an address.</h2>
+      <div className = 'btn-newAddress'>
+        <Button 
+          variant = 'primary' 
+          onClick = {handleNewRegister}>
+          <strong>Register a new address</strong>
+        </Button>
+      </div>
+      <Table>
+        <List list = {address}/>
+      </Table>
+    </>
   )
 }
 
