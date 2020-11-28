@@ -23,9 +23,7 @@ const handleRegister = (event) => {
   localStorage['register'] = JSON.stringify(register)
 }
 
-
 const handleName = (event) => {
-  console.log(name,'rola')
   setName(event.target.value)
 }
 
@@ -48,14 +46,14 @@ const handleZipCode = (event) => {
       
       <Input 
         label = 'adress'  
-        placeholder = 'type your name' 
+        placeholder = 'type your address' 
         type = 'text'
         value = {address} 
         handleChange = {handleAdress}/>
       
       <Input 
         label = 'zipCode' 
-        placeholder = 'type your name' 
+        placeholder = 'type your zipCode' 
         type = 'text' 
         handleChange = {handleZipCode}
         value = {zipCode}/>
