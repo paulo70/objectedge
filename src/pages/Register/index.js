@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Modal, Button, Form } from 'react-bootstrap'
+import { navigate, A } from 'hookrouter'
 
 import Input from '../../components/Input'
+import Message from '../../components/Modal'
 import Model from '../../models/model.js'
 
 
@@ -10,6 +12,7 @@ const register = () => {
 const [name,   setName]     = useState('')
 const [address, setAdress]  = useState('')
 const [zipCode, setZipCode] = useState('')
+const [ showModal, setShowModal ] = useState(false)
 
 
 const handleRegister = (event) => {
@@ -21,6 +24,8 @@ const handleRegister = (event) => {
   register.push(new Model(new Date().getTime(), name, address, zipCode))
 
   localStorage['register'] = JSON.stringify(register)
+
+  setShowModal(true)
 }
 
 const handleName = (event) => {
@@ -35,37 +40,50 @@ const handleZipCode = (event) => {
   setZipCode(event.target.value)
 }
 
-  return (
-    <Form onSubmit = {handleRegister}>
-      <Input 
-        label = 'name'    
-        placeholder = 'type your name' 
-        type = 'text' 
-        value = {name}
-        handleChange = {handleName}/>
-      
-      <Input 
-        label = 'adress'  
-        placeholder = 'type your address' 
-        type = 'text'
-        value = {address} 
-        handleChange = {handleAdress}/>
-      
-      <Input 
-        label = 'zipCode' 
-        placeholder = 'type your zipCode' 
-        type = 'text' 
-        handleChange = {handleZipCode}
-        value = {zipCode}/>
+const handleClose = () => {
+  navigate('/address')
+}
 
-      <Form.Group>
-        <Button 
-          variant = 'success'
-          type = 'submit'>
-          Register
-        </Button>
-      </Form.Group>
-    </Form>
+  return (
+    <>
+      <Form onSubmit = {handleRegister}>
+        <Input 
+          label = 'name'    
+          placeholder = 'type your name' 
+          type = 'text' 
+          value = {name}
+          handleChange = {handleName}/>
+        
+        <Input 
+          label = 'adress'  
+          placeholder = 'type your address' 
+          type = 'text'
+          value = {address} 
+          handleChange = {handleAdress}/>
+        
+        <Input 
+          label = 'zipCode' 
+          placeholder = 'type your zipCode' 
+          type = 'text' 
+          handleChange = {handleZipCode}
+          value = {zipCode}/>
+
+        <Form.Group>
+          <Button 
+            variant = 'success'
+            type = 'submit'>
+            Register
+          </Button>
+        </Form.Group>
+      </Form>
+      <Message 
+        state = {showModal} 
+        content =  'Address was registered with success'
+        type = 'success'
+        handleClose = {handleClose}
+        text = 'continue' 
+        />
+    </>  
   )
 }
 
