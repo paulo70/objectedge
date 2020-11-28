@@ -7,6 +7,8 @@ const address = (props) => {
       <thead>
         <tr>
           <th>name</th>
+          <th>address</th>
+          <th>zipCode</th>
         </tr>
       </thead>
       <tbody>

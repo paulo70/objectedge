@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Table from '../../components/Table'
+import List  from '../../components/ItensAddress'
 
 const address = () => {
 
@@ -25,7 +26,9 @@ const address = () => {
   },[loadAddress])
 
   return (
-    <Table />
+    <Table>
+      <List list = {address}/>
+    </Table>
   )
 }
 
