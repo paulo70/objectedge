@@ -62,7 +62,7 @@ const remove = (props) => {
           </Button>
 
           <Button 
-            variant = 'light'
+            variant = 'danger'
             onClick = {handleCloseModal}>
             No
           </Button>

@@ -13,7 +13,7 @@ const itens = (props) => {
         <td>{item.address}</td>
         <td>{item.zipCode}</td>
         <td className='text-right'>
-          <A href={'/' + item.id } className='btn btn-warning btn-sm'>
+          <A href={'/update/' + item.id } className='btn btn-warning btn-sm'>
           <FontAwesomeIcon icon = {faEdit} />
           </A>
         </td>
