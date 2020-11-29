@@ -50,8 +50,8 @@ const remove = (props) => {
         </Modal.Header>
         
         <Modal.Body>
-          <strong> Are you sure remove this address ? </strong>
-          <p>{`${props.addres.name} - ${props.addres.address} - ${props.addres.zipCode}`}</p>
+          <p>Are you sure remove this address ? </p>
+          <p><strong> {`${props.addres.name} - ${props.addres.address} - ${props.addres.zipCode}`}</strong></p>
         </Modal.Body>
 
         <Modal.Footer>

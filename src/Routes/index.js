@@ -5,8 +5,8 @@ import Register from '../pages/Register'
 import Address  from '../pages/Address'
 
 const routes = {
-  '/':        () => <Register />,
-  '/address': () => <Address />
+  '/':        ()     => <Register />,
+  '/address': ()     => <Address />
 }
 
 const manager = () => {
