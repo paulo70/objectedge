@@ -45,7 +45,7 @@ const address = () => {
         </Button>
       </div>
       <Table>
-        <List list = {address}/>
+        <List list = {address} onLoadAddress = {setLoadAddress}/>
       </Table>
     </>
   )

@@ -18,6 +18,12 @@ const modal = (props) => {
           onClick = { props.handleClose }>
           <strong>{props.text}</strong>
         </Button>
+
+        <Button 
+          variant = {props.type}
+          onClick = { props.handleClose }>
+          <strong>{props.text}</strong>
+        </Button>
       </Modal.Footer>
     </Modal>
   )
