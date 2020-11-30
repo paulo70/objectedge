@@ -43,6 +43,7 @@ Removed Address
 ![Alt text](/src/assets/user-removed.png?raw=true "Remove address screen")
 
 Add new address to billing
+
 ![Alt text](/src/assets/new-billing.png.?raw=true "Billing screen")
 
 List with a new address billing
