@@ -42,6 +42,23 @@ Remove Address
 Removed Address
 ![Alt text](/src/assets/user-removed.png?raw=true "Remove address screen")
 
+Add new address to billing
+
+![Alt text](/src/assets/new-billing.png.?raw=true "Billing screen")
+
+List with a new address billing
+![Alt text](/src/assets/list-billing.png?raw=true "List Billing screen")
+
+Edit Billing
+![Alt text](/src/assets/edit-billing.png?raw=true "Edit Billing screen")
+
+Billing Updated
+![Alt text](/src/assets/billing-update.png?raw=true "Edit Billing screen")
+
+
+
+
+
 
 
 
