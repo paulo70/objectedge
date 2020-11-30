@@ -34,13 +34,13 @@ Edit Update Message
 ![Alt text](/src/assets/update-register.png?raw=true "Edit message screen")
 
 Edit Updated
-![Alt text](/frontend/src/assets/register-updated.png?raw=true "Edit updated")
+![Alt text](/src/assets/register-updated.png?raw=true "Edit updated")
 
 Remove Address
-![Alt text](/frontend/src/assets/remove-user.png?raw=true "Remove address screen")
+![Alt text](/src/assets/remove-user.png?raw=true "Remove address screen")
 
 Removed Address
-![Alt text](/frontend/src/assets/user-removed.png?raw=true "Remove address screen")
+![Alt text](/src/assets/user-removed.png?raw=true "Remove address screen")
 
 
 
