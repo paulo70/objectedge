@@ -85,7 +85,7 @@ const update = (props) => {
 
   return (
     <>
-      <h2>Edit your address</h2>
+      <h2>Edit your Address</h2>
       <Jumbotron>
         <Form onSubmit = {handleUpdate} noValidate validated = {formValidate}>
           <Input
