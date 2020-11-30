@@ -26,7 +26,8 @@ const update = (props) => {
       const register = registers.filter(
         a => a.id === parseInt(props.id)
       )[0];
-      
+
+
       setUserName(register.name)
       setUserAddress(register.address)
       setUserZipCode(register.zipCode)
@@ -59,9 +60,9 @@ const update = (props) => {
         if(registerObj.id === parseInt(props.id)){
           registerObj.name = userName
           registerObj.address = userAddress
-          register.zipCode = userZipCode
-          register.city = userCity
-          register.billing = userNewAddress
+          registerObj.zipCode = userZipCode
+          registerObj.city = userCity
+          registerObj.billing = userNewAddress
         }
 
         return registerObj
@@ -145,7 +146,7 @@ const update = (props) => {
             
             &nbsp;
 
-            <A href = '/address' className='btn btn-light' onClick = {handleBack}>Back</A>   
+            <A href = '/address' className='btn btn-light' onClick = {handleBack}>Cancel</A>   
           </Form.Group>
         </Form>
 
