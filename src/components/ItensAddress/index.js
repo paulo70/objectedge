@@ -12,12 +12,12 @@ const itens = (props) => {
         <td>{item.name}</td>
         <td>{item.address}</td>
         <td>{item.zipCode}</td>
-        <td className='text-right'>
+        <td>{item.city}</td>
+        <td className='text-right' colSpan='2'>
           <A href={'/update/' + item.id } className='btn btn-warning btn-sm'>
-          <FontAwesomeIcon icon = {faEdit} />
+            <FontAwesomeIcon icon = {faEdit} />
           </A>
-        </td>
-        <td className='text-right'>
+          &nbsp;
           <Remove 
             addres = { item }
             onLoadAddress = { props.onLoadAddress } 

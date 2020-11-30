@@ -10,7 +10,7 @@ const address = (props) => {
           <th>Address</th>
           <th>ZipCode</th>
           <th>City</th>
-          <th>UF</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
