@@ -14,25 +14,24 @@ To run this project you need:
 
 Register a new Address
 
+![Alt text](/src/assets/register.png?raw=true "Register screen")
 
-![Alt text](/frontend/src/assets/register.png?raw=true "Register screen")
-
-![Alt text](/frontend/src/assets/sucess-register.png?raw=true "Register success screen")
+![Alt text](/src/assets/sucess-register.png?raw=true "Register success screen")
 
 List of Address
 
-![Alt text](/frontend/src/assets/list-register.png?raw=true "List of address screen")
+![Alt text](/src/assets/list-register.png?raw=true "List of address screen")
 
 Filter an Address
 
-![Alt text](/frontend/src/assets/filter.png?raw=true "Filter screen")
+![Alt text](/src/assets/filter.png?raw=true "Filter screen")
 
 Edit an Address
 
-![Alt text](/frontend/src/assets/edit.png?raw=true "Edit screen")
+![Alt text](/src/assets/edit.png?raw=true "Edit screen")
 
 Edit Update Message
-![Alt text](/frontend/src/assets/update-register.png?raw=true "Edit message screen")
+![Alt text](/src/assets/update-register.png?raw=true "Edit message screen")
 
 Edit Updated
 ![Alt text](/frontend/src/assets/register-updated.png?raw=true "Edit updated")
