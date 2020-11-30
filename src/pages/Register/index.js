@@ -52,6 +52,8 @@ useEffect(() => {
 const handleRegister = (event) => {
   event.preventDefault()
 
+  if(name === '' || address === '' || zipCode === '' || city === '') return
+
   const registerBillingDB = localStorage['register']
   const register = registerBillingDB ? JSON.parse(registerBillingDB) : []
 
@@ -200,7 +202,7 @@ const handleClose = () => {
       <Message 
         state = {showModal} 
         content =  'Address was registered with success'
-        type = 'success'
+        type = 'primary'
         handleClose = {handleClose}
         text = 'continue' 
         />
