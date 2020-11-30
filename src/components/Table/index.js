@@ -10,6 +10,7 @@ const address = (props) => {
           <th>Address</th>
           <th>ZipCode</th>
           <th>City</th>
+          <th>New address to billing</th>
           <th></th>
         </tr>
       </thead>

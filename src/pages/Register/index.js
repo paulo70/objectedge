@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Modal, Button, Form } from 'react-bootstrap'
+import { Modal, Button, Form, InputGroup, FormControl } from 'react-bootstrap'
 import { navigate, A } from 'hookrouter'
 
 import Input from '../../components/Input'
@@ -16,6 +16,15 @@ const [address, setAdress]  = useState('')
 const [zipCode, setZipCode] = useState('')
 const [city, setCity]       = useState('')
 const [cities, setCities]   = useState([])
+const [newAddress, setNewAddress] = useState('')
+
+const [shipping, setShipping] = useState('default')
+const [shippingChecked, setShippingChecked] = useState(true)
+
+const [billing, setBilling] = useState('new billing')
+const [billingChecked, setBillingChecked] = useState(false)
+
+const [addressBilling, setAdressBilling] = useState()
 const [ showModal, setShowModal ] = useState(false)
 
 const URL = 'https://servicodados.ibge.gov.br/api/v1/localidades/distritos'  
@@ -39,9 +48,6 @@ useEffect(() => {
 
 },[URL])
 
-useEffect(() => {
-
-})
 
 const handleRegister = (event) => {
   event.preventDefault()
@@ -49,7 +55,7 @@ const handleRegister = (event) => {
   const registerBillingDB = localStorage['register']
   const register = registerBillingDB ? JSON.parse(registerBillingDB) : []
 
-  register.unshift(new Model(new Date().getTime(), name, address, zipCode, city))
+  register.unshift(new Model(new Date().getTime(), name, address, zipCode, city, newAddress))
 
   localStorage['register'] = JSON.stringify(register)
 
@@ -70,6 +76,35 @@ const handleZipCode = (event) => {
 
 const handleCity = (event) => {
   setCity(event.target.value)
+}
+
+const handleNewAddress = (event) => {
+  setNewAddress(event.target.value)
+}
+
+const handleShipping = (event) => {
+
+  if(event.target.checked){
+    setShipping(event.target.value)
+    setShippingChecked(true)
+    setAdressBilling(false)
+    setBillingChecked(false)
+    console.log('value', shipping)
+  }
+
+}
+
+const handleBilling = (event) => {
+  if(event.target.checked){
+    setShipping(event.target.value)
+    setBillingChecked(true)
+    setAdressBilling(true)
+    setShippingChecked(false)
+    console.log('value', billing)
+  } else{
+    setAdressBilling(false)
+    setShippingChecked(true)
+  }
 }
 
 const handleClose = () => {
@@ -99,7 +134,43 @@ const handleClose = () => {
           type = 'text'
           value = {address} 
           handleChange = {handleAdress}/>
-        
+
+        <div className='groupCheckbox'>
+          <label htmlFor="Default Shipping Address">Default Shipping Address:
+            <input 
+              type='checkbox' 
+              name="Default Shipping Address"
+              id='Default Shipping Address'
+              value='default'
+              checked = {shippingChecked}
+              onChange = {e => handleShipping(e)} />
+              
+           </label>   
+          
+          <label htmlFor="Billing Address">Billing Address:
+            <input 
+              type='checkbox' 
+              name="Billing Address"
+              id='Billing Address'
+              value='new billing'
+              checked = {billingChecked}
+              onChange = {e => handleBilling(e)}/>
+          </label>
+          
+        </div>
+
+        { addressBilling ? 
+
+          (
+            <Input 
+              label = '*New Billing Address' 
+              placeholder = 'type your Billing Address' 
+              type = 'text' 
+              handleChange = {handleNewAddress}
+              value = {newAddress}/>
+          ): '' 
+        }
+          
         <Input 
           label = 'ZipCode' 
           placeholder = 'type your zipCode' 

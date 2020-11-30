@@ -8,10 +8,13 @@ const update = (props) => {
 
   const [showModal, setShowModal ] = useState(false)
   const [formValidate, setFormValidate] = useState(false)
+  
   const [userName, setUserName] = useState('')
   const [userAddress, setUserAddress] = useState('')
   const [userZipCode, setUserZipCode] = useState('')
   const [userCity, setUserCity] = useState('')
+  const [userNewAddress, setUserNewAddress] = useState('')
+
   const [loadAddress, setLoadAddress] = useState(true)
 
   useEffect(() => {
@@ -28,6 +31,7 @@ const update = (props) => {
       setUserAddress(register.address)
       setUserZipCode(register.zipCode)
       setUserCity(register.city)
+      setUserNewAddress(register.billing)
       setLoadAddress(false)
     }
 
@@ -57,6 +61,7 @@ const update = (props) => {
           registerObj.address = userAddress
           register.zipCode = userZipCode
           register.city = userCity
+          register.billing = userNewAddress
         }
 
         return registerObj
@@ -81,6 +86,10 @@ const update = (props) => {
 
   const handleChangeCity = (event) => {
     setUserCity(event.target.value)
+  }
+
+  const handleChangeNewAddress = (event) => {
+    setUserNewAddress(event.target.value)
   }
 
   return (
@@ -118,6 +127,14 @@ const update = (props) => {
             placeholder = 'type a city'
             value = {userCity} 
             handleChange = {handleChangeCity}
+          />
+
+          <Input
+            type = 'text'
+            label = 'New billing address'
+            placeholder = 'type a new address'
+            value = {userNewAddress} 
+            handleChange = {handleChangeNewAddress}
           />
           <Form.Group>
             <Button 

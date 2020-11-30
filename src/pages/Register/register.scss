@@ -2,3 +2,15 @@
   display: block;
   text-align: right;
 }
+
+.groupCheckbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 1.875em;
+
+  input{
+    margin-left: 0.3125em;
+  }
+}
