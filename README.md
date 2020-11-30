@@ -44,7 +44,7 @@ Removed Address
 
 Add new address to billing
 
-![Alt text](/src/assets/new-billing.png.?raw=true "Billing screen")
+![Alt text](/src/assets/news-billing.png.?raw=true "Billing screen")
 
 List with a new address billing
 ![Alt text](/src/assets/list-billing.png?raw=true "List Billing screen")
